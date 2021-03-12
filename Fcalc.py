@@ -8,67 +8,67 @@ def inp(value):
             x = float(input(value))
             return x
         except ValueError:
-            lst = ['Давай числа.', 'Треба вводити числа.', 'Нічого крім чисел.']
+            lst = ['Input only numbers, please.', 'Sorry, only numbers.', 'Numbers...please.']
             print(random.choice(lst))
             print()
 
 
-print('Всратий калькулятор')
+print('F**ked calculator')
 print()
 
 while True:
-    a = inp('Давай перше число: ')
-    b = inp('Друге число: ')
+    a = inp('First number: ')
+    b = inp('Second number: ')
 
     while True:
-        what = input('Шо робим? Вибирай +, -, *,/: ')
+        what = input('What shall I do +, -, *,/ ?: ')
         if what == '+':
-            print('Вичисляю...')
+            print('Where is my calculator?...')
             time.sleep(2)
             c = a + b
-            print('Вроді так: ' + str(c))
+            print('Here you go: ' + str(c))
             break
         elif what == '-':
-            print('Думаю...')
+            print("I'm thinking...")
             time.sleep(2)
             c = a - b
-            print('А ось і відповідь: ' + str(c))
+            print('I guess it is: ' + str(c))
             break
         elif what == '*':
-            print('Ща...')
+            print('One sec...')
             time.sleep(2)
             c = a * b
-            print('Єслі шо, я не приділах: ' + str(c))
+            print("Don't matter what, we don't know each other: " + str(c))
             break
         elif what == '/':
-            print('Ммм...зараз...')
+            print('Hmm...give me a minute...')
             time.sleep(2)
             if b == 0:
                 try:
                     c = a / b
                 except ZeroDivisionError:
-                    print('Ти з якої планети? На 0 ділити не можна.')
+                    print('Division by 0? You seriously? Even I know that is wrong.')
             else:
                 c = a / b
-                print('Вот: ' + str(c))
+                print("I believe it's: " + str(c))
             break
         else:
-            print('Нє, ну ти валянок? Сказано: вибери один з чотирьох варіантів, не більше, не менше.')
+            print('Hey, you need to choose one of four options.')
             print()
 
     print()
-    ans = input('Продолжаєм?\n да +, нє -: ')
+    ans = input('Continue?\n yep +, nope -: ')
     if ans == '+':
         print()
     elif ans == '-':
         break
     else:
-        ans1 = input('OMG, хіба так тяжко? Або +, або -, вибери. Будь ласка: ')
+        ans1 = input('OMG, is it so hard to choose? Either + or -. Please: ')
         print()
         if ans1 == '+':
             print()
         elif ans1 == '-':
             break
         else:
-            print('Ой, та нахрін все!')
+            print("For god's sake, f**k it, I'm out!")
             break
